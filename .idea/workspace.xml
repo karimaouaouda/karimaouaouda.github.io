@@ -5,8 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af62c295-2db0-4a1b-96b9-c93c21fd8e40" name="Changes" comment="karim profile">
-      <change afterPath="$PROJECT_DIR$/_pages/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/chunks/145-079c92f4c2ba1246.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/chunks/472-415f2fa593509cf5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/chunks/app/_not-found-32d2eb4c7bcfcdfe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/chunks/app/layout-c2aa1c5ec9fefb49.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/chunks/app/page-f674a2ae3594db32.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/chunks/fd9d1056-3f2c7d19fbb5cc96.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/chunks/framework-8883d1e9be70c3da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/chunks/main-58f672b59320d807.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/chunks/main-app-61b6aa93e3da8551.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/chunks/pages/_app-ee276fea40a4b191.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/chunks/pages/_error-deeb844d2074b9d8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/chunks/webpack-9b96f2ab780fa2b3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/css/4f3ff0263189d3cf.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/css/7977a086c5a3d23a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/css/d584b21a4cc13a46.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/05a31a2ca4975f99-s.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/513657b02c5c193f-s.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/51ed15f9841b9f9d-s.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/C.dd858572.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/aichat.ffbcdd64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/bootstrap-icons.0b6b73b0.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/bootstrap-icons.a0e283a4.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/d6b16ce4a6175f26-s.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/ec159349637c90ad-s.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/fd4db3eb5472fc27-s.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/mailer.dc4dace4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/phpweb.7a007415.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/media/pic2.0bec0086.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/rbl2_XH1IO6fU53PNHuEl/_buildManifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_next/static/rbl2_XH1IO6fU53PNHuEl/_ssgManifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_pages/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-pic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +55,13 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -23,9 +69,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\laragon\bin\php\php-8.3.0-Win32-vs16-x64\php.exe" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2adxg9WTqTf6rftBE9Lk1AEpyZl" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,6 +79,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -60,6 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1704662365554</updated>
       <workItem from="1704662366706" duration="1462000" />
+      <workItem from="1705334930251" duration="63000" />
     </task>
     <task id="LOCAL-00001" summary="karim profile">
       <option name="closed" value="true" />
@@ -90,6 +138,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="karim profile" />
