@@ -1,10 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/wave.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Karim Aouaouada - portfolio</title>
 </head>
-<body>
-hi there
+
+<body class="w-screen h-screen overflow-auto">
+    <div class="app w-full min-h-screen">
+        <!-- start with the navbar -->
+        <nav class="h-[3rem] bg-slate-700 flex justify-between px-10 w-full" x-data="{open : false}">
+            <div class="brand px-2 flex items-center justify-between w-fit">
+                <a href="#">
+                    <span class="text-xl font-bold text-white">
+                        <em class="text-sky-500">
+                            &#8826;
+                        </em>
+                        KA
+                        <em class="text-sky-500">
+                            .
+                        </em>
+                        DEV
+                        <em class="text-sky-500">
+                            &#8827;
+                        </em>
+                    </span>
+                </a>
+
+                <button class="nav-toggler w-6 flex lg:hidden py-1 px-1 flex-col relative justify-around items-center gaps-4" :class="{'h-6' : open, 'h-4' : !open}" @click="open = !open">
+                    <span class="h-[2px] bg-white w-full rounded-full top-0 absolute duration-300 ease-in-out" :class="{'top-1/2 left-0 rotate-45' : open}"></span>
+                    <span class="h-[2px] bg-white w-full rounded-full top-1/2 -translate-y-1/2 absolute duration-150 ease-in-out" :class="{'opacity-0' : open}" ></span>
+                    <span class="h-[2px] bg-white w-full rounded-full bottom-0 absolute duration-300 ease-in-out" :class="{'top-1/2 right-0 -rotate-45' : open}"></span>
+                </button>
+            </div>
+
+            <ul class="nav-list flex text-white font-semibold tracking-wide py-1 h-full px-4">
+                <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
+                    <a href="#" 
+                        class="hover:text-slate-200 block h-full px-2 flex items-center
+                                ">
+                        Home
+                    </a>
+                </li>
+                <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
+                    <a href="#" 
+                        class="hover:text-slate-200 block h-full px-2 flex items-center
+                                ">
+                        Home
+                    </a>
+                </li>
+                <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
+                    <a href="#" 
+                        class="hover:text-slate-200 block h-full px-2 flex items-center
+                                ">
+                        Home
+                    </a>
+                </li>
+                <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
+                    <a href="#" 
+                        class="hover:text-slate-200 block h-full px-2 flex items-center
+                                ">
+                        Home
+                    </a>
+                </li>
+                <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
+                    <a href="#" 
+                        class="hover:text-slate-200 block h-full px-2 flex items-center
+                                ">
+                        Home
+                    </a>
+                </li>
+            </ul>
+
+            <div class="btns flex py-1">
+                <a href="#" class="p-2 mx-2 bg-white rounded-md hover:bg-slate-200 font-semibold text-slate-700">
+                    <i class="bi bi-headset"></i> contact now !
+                </a>
+
+                <a href="#" class="p-2 mx-2 text-white rounded-full relative top-0
+                                duration-300 ease-in-out font-extrabold text-sm uppercase flex items-center
+                                hover:top-1">
+                    <i class="bi bi-download mr-2 h-full flex items-center font-extrabold"></i>
+                    <span>
+                        download CV
+                    </span>
+                </a>
+            </div>
+
+            
+        </nav>
+
+        <div class="header w-full bg-slate-100 relative" style="min-height: calc(100vh - 3rem);">
+
+
+            <svg class="editorial bottom-0 absolute" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="50" y="0" fill="dodgerblue" />
+                    <use xlink:href="#gentle-wave" x="50" y="3" fill="#aaa" />
+                    <use xlink:href="#gentle-wave" x="50" y="6" fill="whitesmoke" />
+                    <use xlink:href="#gentle-wave" x="50" y="6" fill="white" />
+                </g>
+            </svg>
+            <br clear="all">
+
+        </div>
+
+        <div class="min-h-screen w-full bg-white">
+
+        </div>
+
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
 </body>
+
 </html>
