@@ -4,7 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af62c295-2db0-4a1b-96b9-c93c21fd8e40" name="Changes" comment="karim profile" />
+    <list default="true" id="af62c295-2db0-4a1b-96b9-c93c21fd8e40" name="Changes" comment="karim profile">
+      <change afterPath="$PROJECT_DIR$/assets/images/ai.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/aichat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/cp/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/cp/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/cp/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/cp/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/cp/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/laravel-pack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/lr/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/lr/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/lr/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/lr/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/lr/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/projects.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/py.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/projects.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/info.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/custom.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +93,8 @@
       <workItem from="1705396334984" duration="29000" />
       <workItem from="1705483769682" duration="350000" />
       <workItem from="1705537206018" duration="116000" />
+      <workItem from="1705586867316" duration="2672000" />
+      <workItem from="1705609748911" duration="53000" />
     </task>
     <task id="LOCAL-00001" summary="karim profile">
       <option name="closed" value="true" />
@@ -118,7 +144,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705537296635</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="karim profile">
+      <option name="closed" value="true" />
+      <created>1705586924106</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705586924106</updated>
+    </task>
+    <task id="LOCAL-00008" summary="karim profile">
+      <option name="closed" value="true" />
+      <created>1705589518523</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705589518523</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

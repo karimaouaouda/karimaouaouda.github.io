@@ -1,6 +1,3 @@
-window.onload = () => {
-    new WOW().init();
-}
 
 
 function autoCarousel(data) {
@@ -21,4 +18,34 @@ function backToTop(){
     document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
     console.log("clocked")
+}
+
+
+
+
+async function getPics(t){
+    let d = await fetch("./js/info.json", {
+        method : "GET"
+    }).then(res => res.json())
+    .then(js => js);
+
+    console.log(d[t]['pics'])
+
+
+
+    return d[t]['pics']
+}
+
+async function initmain(data){
+    return (await getPics(data))[0]
+}
+
+async function getDescription(t){
+    let d = await fetch("./js/info.json", {
+        method : "GET"
+    }).then(res => res.json())
+    .then(js => js);
+
+
+    return d[t]['description']
 }

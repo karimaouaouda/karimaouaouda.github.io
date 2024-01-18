@@ -1,0 +1,21 @@
+{
+    "lr" : {
+        "pics" : [
+            "1.jpg",
+            "2.jpg",
+            "3.jpg",
+            "4.jpg",
+            "5.jpg"],
+        "description" : "is a somple implementation of rating system that allows developpers to let's deferent users with deferent guards to rate models ( products ... ) and simply let the adding comments images with their rates, all these with simple code, include it, configure it, and enjoy"
+    },
+
+    "cp" :  {
+        "pics" : [
+            "1.jpg",
+            "2.jpg",
+            "3.jpg",
+            "4.jpg",
+            "5.jpg"],
+        "description" : "is a simple implementation of a Artificial Intelegence chat bot with deferent tools (graphical user interface only right now), the server come soon"
+    }
+}

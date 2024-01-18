@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <link rel="stylesheet" href="./css/wave.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/projects.css">
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <style>
+        * {
+            font-family: 'Merriweather';
+        }
+    </style>
+
+    <title>Karim Aouaouada - portfolio</title>
+
+</head>
+
+<body class="w-screen h-screen overflow-auto">
+    <div class="app w-full min-h-screen relative bg-slate-700">
+        <nav class="h-[3rem] bg-slate-700 flex justify-between px-10 w-full" x-data="{open : false}">
+            <div class="brand px-2 flex items-center justify-between w-full lg:w-fit">
+                <a href="#">
+                    <span class="text-xl font-bold text-white">
+                        <em class="text-sky-500">
+                            &#8826;
+                        </em>
+                        KA
+                        <em class="text-sky-500">
+                            .
+                        </em>
+                        DEV
+                        <em class="text-sky-500">
+                            &#8827;
+                        </em>
+                    </span>
+                </a>
+
+                <button
+                    class="nav-toggler w-6 flex lg:hidden py-1 px-1 flex-col relative justify-around items-center gaps-4"
+                    :class="{'h-6' : open, 'h-4' : !open}" @click="open = !open">
+                    <span class="h-[2px] bg-white w-full rounded-full top-0 absolute duration-300 ease-in-out"
+                        :class="{'top-1/2 left-0 rotate-45' : open}"></span>
+                    <span
+                        class="h-[2px] bg-white w-full rounded-full top-1/2 -translate-y-1/2 absolute duration-150 ease-in-out"
+                        :class="{'opacity-0' : open}"></span>
+                    <span class="h-[2px] bg-white w-full rounded-full bottom-0 absolute duration-300 ease-in-out"
+                        :class="{'top-1/2 right-0 -rotate-45' : open}"></span>
+                </button>
+            </div>
+
+            <ul class="nav-list lg:flex hidden text-white font-semibold tracking-wide py-1 h-full px-4">
+                <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
+                    <a href="https://karimaouaouda.github.io/#home" class="hover:text-slate-200 block h-full px-2 flex items-center
+                                ">
+                        Home
+                    </a>
+                </li>
+                <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
+                    <a href="https://karimaouaouda.github.io/#about" class="hover:text-slate-200 block h-full px-2 flex items-center
+                                ">
+                        about
+                    </a>
+                </li>
+                <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
+                    <a href="https://karimaouaouda.github.io/#rates" class="hover:text-slate-200 block h-full px-2 flex items-center
+                                ">
+                        rates
+                    </a>
+                </li>
+                <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
+                    <a href="https://karimaouaouda.github.io/#contact" class="hover:text-slate-200 block h-full px-2 flex items-center
+                                ">
+                        contact
+                    </a>
+                </li>
+                <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
+                    <a href="./projects.html" class="hover:text-slate-200 block h-full px-2 flex items-center
+                                ">
+                        projects
+                    </a>
+                </li>
+            </ul>
+
+            <div class="btns lg:flex py-1 hidden">
+                <a href="#" class="p-2 mx-2 bg-white rounded-md hover:bg-slate-200 font-semibold text-slate-700">
+                    <i class="bi bi-headset"></i> contact now !
+                </a>
+
+                <a href="#" class="p-2 mx-2 text-white rounded-full relative top-0
+                                duration-300 ease-in-out font-extrabold text-sm uppercase flex items-center
+                                hover:top-1">
+                    <i class="bi bi-download mr-2 h-full flex items-center font-extrabold"></i>
+                    <span>
+                        download CV
+                    </span>
+                </a>
+            </div>
+
+
+        </nav>
+
+        <div id="projects" x-data="{current : 1}" class="header py-2 w-full flex justify-around items-start pt-2 lg:pt-16 relative"
+            style="min-height: calc(100vh - 3rem);">
+            <div id="particles-js" class="absolute w-full h-full top-0 left-0 particles-js"></div>
+
+            <div
+                class="w-full mb-16 px-2 md:px-4 lg:px-20  mx-auto projects-box">
+                <div data-number="1" :class="{'active' : $el.dataset.number == current}" class="w-full flex justify-around items-center  flex-col lg:flex-row">
+                    <div class="glass w-72 shadow-2xl h-72 rounded-md overflow-hidden
+                            flex mb-4 p-8">
+                        <img src="./assets/images/laravel-pack.png" alt="no pic" class="w-full h-full relative top-4">
+                    </div>
+
+                    <div class="glass relative w-fit px-10 py-8 text-center flex flex-col justify-between wow fadeInRight">
+
+                        <div class="w-full leading-10 relative">
+                            
+                            <h1 class="text-2xl text-white font-extrabold tracking-wider uppercase leading-[2.4rem]">
+                                the php framework <span class="text-red-500">for web artisans</span>
+                            </h1>
+                            <h1 class="text-xl mt-2 font-semibold leading-[2.4rem] text-white uppercase">
+                                packages developpement 
+                            </h1>
+
+                            <h6 class="text-md text-white my-4 max-w-[500px] mx-auto ">
+                                yeah it's true, I developpe <span class="p-1 h-8 bg-slate-100 text-red-500 rounded-lg inline-flex items-center"><img
+                                    class="h-4 mr-1 w-fit" src="./assets/images/laravel-icon2.png"
+                                    alt="">Laravel</span> packages for Other developpers to use, you will find examples :) 
+                            </h6>
+                        </div>
+
+                        <div class="socials w-full flex justify-around p-2" @click="current = 2">
+                            <button class="relative h-10 w-40">
+                                <span class="absolute pointer-events-none w-full h-full border-2 border-red-500 left-0 top-0">
+
+                                </span>
+                                <span class="w-full absolute border border-red-500 block h-full flex text-sm justify-center items-center top-0 left-0
+                                            hover:-top-1 bg-red-500 text-white font-semibold uppercase hover:-left-1 duration-150 ease-in">
+                                    what's else
+                                </span>
+                            </button>
+
+                            <button class="relative h-10 w-60">
+                                <span class="absolute pointer-events-none w-full h-full border-2 border-red-500 left-0 top-0">
+
+                                </span>
+                                <span class="w-full absolute border border-red-500 block h-full flex text-sm justify-center items-center top-0 left-0
+                                            hover:-top-1 text-red-500 font-semibold uppercase hover:-left-1 duration-150 ease-in bg-white">
+                                    skip to projects gallery <i class="bi bi-arrow-right"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div  data-number="2" :class="{'active' : $el.dataset.number == current}" class="w-full flex justify-around items-center  flex-col lg:flex-row">
+                    <div  class="glass w-72 shadow-2xl h-72 rounded-md overflow-hidden
+                            flex mb-4 p-8">
+                        <img src="./assets/images/projects.png" alt="no pic" class="w-full h-full relative top-4">
+                    </div>
+
+                    <div  class="glass relative w-fit px-10 py-8 text-center flex flex-col justify-between wow fadeInRight">
+                        <div class="w-full leading-10">
+                            <button @click="current--" class="h-6 flex justify-center items-center absolute top-1 left-1 rounded p-1 bg-red-500 text-white">
+                                <i class="bi bi-arrow-left"></i> <span class="text-xs">back</span>
+                            </button>
+                            <h1 class="text-2xl text-white font-extrabold tracking-wider uppercase leading-[2.4rem]">
+                                <span class="p-1 bg-sky-500 text-white rounded">UI</span> <span class="p-1 bg-red-500 text-white rounded">Components</span> 
+                                 and full sub systems
+                            </h1>
+                            <h1 class="text-xl mt-2 w-fit mx-auto font-semibold border-b-2 border-red-500 leading-[2.4rem] text-white uppercase">
+                                Developper
+                            </h1>
+
+                            <h6 class="text-md text-white my-4 max-w-[500px] mx-auto ">
+                                from <span class="p-1 h-8 bg-slate-100 text-red-500 rounded-lg inline-flex items-center"><img
+                                    class="h-4 mr-1 w-fit" src="./assets/images/laravel-icon2.png"
+                                    alt="">Laravel</span> packages to UI components and sub systems, i developpe ui components using deferent techs
+                                    and developpe sub systems
+                            </h6>
+                        </div>
+
+                        <div class="socials w-full flex justify-around p-2">
+                            <button @click="current = 3" class="relative h-10 w-40">
+                                <span class="absolute pointer-events-none w-full h-full border-2 border-red-500 left-0 top-0">
+
+                                </span>
+                                <span class="w-full absolute border border-red-500 block h-full flex text-sm justify-center items-center top-0 left-0
+                                            hover:-top-1 bg-red-500 text-white font-semibold uppercase hover:-left-1 duration-150 ease-in">
+                                    what's else
+                                </span>
+                            </button>
+
+                            <button class="relative h-10 w-60">
+                                <span class="absolute pointer-events-none w-full h-full border-2 border-red-500 left-0 top-0">
+
+                                </span>
+                                <span class="w-full absolute border border-red-500 block h-full flex text-sm justify-center items-center top-0 left-0
+                                            hover:-top-1 text-red-500 font-semibold uppercase hover:-left-1 duration-150 ease-in bg-white">
+                                    skip to projects gallery <i class="bi bi-arrow-right"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div  data-number="3" :class="{'active' : $el.dataset.number == current}" class="w-full flex justify-around items-center  flex-col lg:flex-row">
+                    <div  class="glass w-72 shadow-2xl h-72 rounded-md overflow-hidden
+                            flex mb-4 p-8">
+                        <img src="./assets/images/aichat.png" alt="no pic" class="w-full h-full relative top-4">
+                    </div>
+
+                    <div  class="glass relative w-fit px-10 py-8 text-center flex flex-col justify-between wow fadeInRight">
+                        <button @click="current--" class="h-6 flex justify-center items-center absolute top-1 left-1 rounded p-1 bg-red-500 text-white">
+                            <i class="bi bi-arrow-left"></i> <span class="text-xs">back</span>
+                        </button>
+
+                        <div class="w-full leading-10">
+                            <h1 class="text-2xl text-white font-extrabold tracking-wider uppercase leading-[2.4rem]">
+                               <span class="p-1 bg-sky-500 text-white rounded">Artificial Intelegence</span> projects and 
+                            </h1>
+                            <h1 class="text-xl mt-2 font-semibold leading-[2.4rem] text-white uppercase">
+                                python Components
+                            </h1>
+
+                            <h6 class="text-md text-white my-4 max-w-[500px] mx-auto ">
+                                I developpe alse a <span class="p-1 h-8 bg-slate-100 text-red-500 rounded-lg inline-flex items-center"><img
+                                    class="h-4 mr-1 w-fit" src="./assets/images/ai.png"
+                                    alt="">Artificial Intelegence</span> projects line ai chats and some <span class="p-1 h-8 bg-slate-100 text-red-500 rounded-lg inline-flex items-center"><img
+                                        class="h-4 mr-1 w-fit scale-150" src="./assets/images/py.svg"
+                                        alt="">python</span> components and programmes
+                        </div>
+
+                        <div class="socials w-full flex justify-around p-2">
+
+                            <button class="relative h-10 w-72">
+                                <span class="absolute pointer-events-none w-full h-full border-2 border-red-500 left-0 top-0">
+
+                                </span>
+                                <span class="w-full absolute border border-red-500 block h-full flex text-sm justify-center items-center top-0 left-0
+                                            hover:-top-1 text-red-500 font-semibold uppercase hover:-left-1 duration-150 ease-in bg-white">
+                                    proceed to projects gallery <i class="bi bi-arrow-right"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <svg class="editorial bottom-0 absolute" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="50" y="0" fill="dodgerblue" />
+                    <use xlink:href="#gentle-wave" x="50" y="3" fill="#aaa" />
+                    <use xlink:href="#gentle-wave" x="50" y="6" fill="whitesmoke" />
+                    <use xlink:href="#gentle-wave" x="50" y="6" fill="white" />
+                </g>
+            </svg>
+            <br clear="all">
+
+        </div>
+
+
+
+        <div id="gallery" x-data="{
+            open : false,
+            selectedCode : 'lr',
+            selectedCountry : 'laravel-rater',
+            selectedDescription : getDescription('lr'),
+            pics : getPics('lr'),
+            mainPic : this.pics ?? [0]
+        }" x-init="mainPic = (await pics)[0];"
+         class="min-h-screen bg-white py-2 w-full flex justify-around items-start pt-2 lg:pt-16 relative">
+            <div class="mt-4 flex flex-col">
+                <div class="view p-2 flex flex-wrap items-center justify-center lg:justify-around">
+                    <div class="main-pic shadow-lg rounded-lg bg-slate-100 p-2 mb-4 lg:mb-0">
+                        <div class="pic w-[90vw] sm:w-[400px] h-auto sm:h-[400px] rounded-lg overflow-hidden">
+                            <img class="w-ful h-full" :src="'./assets/images/'+selectedCode+'/' + mainPic" alt="">
+                        </div>
+                    </div>
+                    <div class="desc-box w-screen lg:w-fit py-8 px-4 ml-0 lg:ml-4 bg-slate-100 shadow-lg flex flex-col justify-between items-start">
+                        <div class="title mx-auto lg:mx-2">
+                            <h1 class="text-md sm:text-lg text-center lg:text-left lg:text-2xl text-red-500 font-bold">
+                                karimaouaouda/ <span x-text="selectedCountry"></span> <a href="#" class="inline-block ml-2"><i class="bi bi-box-arrow-up-right"></i></a>
+                            </h1>
+                        </div>
+                        <div class="description">
+                            <h6 class="text-lg text-sky-500 leading-10">
+                                description :
+                            </h6>
+                            <p class="leading-8 text-xs sm:text-sm lg:text-lg w-full lg:max-w-[600px]">
+                                <span class="p-1 rounded bg-red-500 text-white" x-text="selectedCountry"></span>
+                                <span x-text="selectedDescription">
+
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="pics">
+                            <h6 class="text-lg text-sky-500">
+                                images :
+                            </h6>
+
+                            <div class="pics-contaciner flex">
+                                <div class="flex flex-1 whitespace-nowrap items-center p-1 w-full lg:max-w-[600px] overflow-auto">
+                                    <template x-for="pic in pics">
+                                        <img @click="mainPic = $el.dataset.pic" :data-pic="pic" :src="'./assets/images/' + selectedCode + '/' + pic" class="w-14 h-14 mx-2 rounded shadow-lg hover:scale-110 shrink-0 cursor-pointer" alt="">
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 w-full p-2 projectstoggler">
+                    <div
+                    x-init="$watch('selectedCode' , value => open = false)"
+                    x-bind:class="{'rounded-t-lg' : !open}"
+                     class="select-box w-full sm:w-2/3 md:w-2/3  mx-auto  rounded-b-lg bg-slate-100 shadow-lg p-2 h-12 relative">
+                        <div id="select" class="select w-full h-full text-slate-200 font-normal
+                        ">
+                            <div x-on:click="open = !open" class="selectd-box cursor-pointer text-xl flex items-center justify-between w-full h-full">
+                                <div class="left flex">
+                                    <div class="icon text-2xl mx-2">
+                                        <i class="bi bi-list text-slate-800"></i>
+                                    </div>
+                                    <span class="chosen flex text-red-500 items-center" x-text="selectedCountry">
+                                        
+                                    </span>
+                                </div>
+                                <div class="right  h-full">
+                                    <img x-bind:src="'./assets/images/' + selectedCode + '/' + mainPic" class=" h-full">
+                                </div>
+                            </div>
+                            <div x-bind:class="{ 'hidden': !open }" class="options rounded-t-lg absolute bg-sky-500 py-2 bottom-full w-full left-0">
+                                <div x-on:click="selectedCode = code ; selectedCountry = country;mainPic = pic; selectedDescription = desc" x-bind:class="{'hidden' : code == selectedCode}" x-data="{code : 'lr' , country : 'laravel-rater', pic : '1.jpg', desc : getDescription('lr')}" class="option px-2 py-1  cursor-pointer text-xl flex items-center justify-start h-10 hover:bg-sky-400 duration-300 ease-in-out">
+                                    <div class="left h-full flex">
+                                        <div class="icon mx-2 h-full">
+                                            <img class=" h-full" x-bind:src="pic">
+                                        </div>
+                                        <span class="chosen flex items-center" x-text="country">
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div x-on:click="selectedCode = code ; selectedCountry = country;mainPic = pic; selectedDescription = desc" x-bind:class="{'hidden' : code == selectedCode}" x-data="{code : 'cp' , country : 'front-chatpy', pic : '1.jpg', desc : getDescription('cp')}" class="option px-2 py-1  cursor-pointer text-xl flex items-center justify-start h-10 hover:bg-sky-400 duration-300 ease-in-out">
+                                    <div class="left h-full flex">
+                                        <div class="icon mx-2 h-full">
+                                            <img class=" h-full" x-bind:src="pic">
+                                        </div>
+                                        <span class="chosen flex items-center" x-text="country">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script src="./particles.js"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/custom.js"></script>
+</body>
+
+</html>
