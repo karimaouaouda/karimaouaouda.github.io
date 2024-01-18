@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="./css/wave.css">
     <link rel="stylesheet" href="./css/custom.css">
     <!-- Option 1: Include in HTML -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Karim Aouaouada - portfolio</title>
 </head>
 
 <body class="w-screen h-screen overflow-auto">
-    <div class="app w-full min-h-screen">
+    <div class="app w-full min-h-screen relative bg-slate-700">
+        
         <!-- start with the navbar -->
         <nav class="h-[3rem] bg-slate-700 flex justify-between px-10 w-full" x-data="{open : false}">
-            <div class="brand px-2 flex items-center justify-between w-fit">
+            <div class="brand px-2 flex items-center justify-between w-full lg:w-fit">
                 <a href="#">
                     <span class="text-xl font-bold text-white">
                         <em class="text-sky-500">
@@ -31,52 +32,53 @@
                     </span>
                 </a>
 
-                <button class="nav-toggler w-6 flex lg:hidden py-1 px-1 flex-col relative justify-around items-center gaps-4" :class="{'h-6' : open, 'h-4' : !open}" @click="open = !open">
-                    <span class="h-[2px] bg-white w-full rounded-full top-0 absolute duration-300 ease-in-out" :class="{'top-1/2 left-0 rotate-45' : open}"></span>
-                    <span class="h-[2px] bg-white w-full rounded-full top-1/2 -translate-y-1/2 absolute duration-150 ease-in-out" :class="{'opacity-0' : open}" ></span>
-                    <span class="h-[2px] bg-white w-full rounded-full bottom-0 absolute duration-300 ease-in-out" :class="{'top-1/2 right-0 -rotate-45' : open}"></span>
+                <button
+                    class="nav-toggler w-6 flex lg:hidden py-1 px-1 flex-col relative justify-around items-center gaps-4"
+                    :class="{'h-6' : open, 'h-4' : !open}" @click="open = !open">
+                    <span class="h-[2px] bg-white w-full rounded-full top-0 absolute duration-300 ease-in-out"
+                        :class="{'top-1/2 left-0 rotate-45' : open}"></span>
+                    <span
+                        class="h-[2px] bg-white w-full rounded-full top-1/2 -translate-y-1/2 absolute duration-150 ease-in-out"
+                        :class="{'opacity-0' : open}"></span>
+                    <span class="h-[2px] bg-white w-full rounded-full bottom-0 absolute duration-300 ease-in-out"
+                        :class="{'top-1/2 right-0 -rotate-45' : open}"></span>
                 </button>
             </div>
 
-            <ul class="nav-list flex text-white font-semibold tracking-wide py-1 h-full px-4">
+            <ul class="nav-list lg:flex hidden text-white font-semibold tracking-wide py-1 h-full px-4">
                 <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
-                    <a href="#" 
-                        class="hover:text-slate-200 block h-full px-2 flex items-center
+                    <a href="#" class="hover:text-slate-200 block h-full px-2 flex items-center
                                 ">
                         Home
                     </a>
                 </li>
                 <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
-                    <a href="#" 
-                        class="hover:text-slate-200 block h-full px-2 flex items-center
+                    <a href="#" class="hover:text-slate-200 block h-full px-2 flex items-center
                                 ">
                         Home
                     </a>
                 </li>
                 <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
-                    <a href="#" 
-                        class="hover:text-slate-200 block h-full px-2 flex items-center
+                    <a href="#" class="hover:text-slate-200 block h-full px-2 flex items-center
                                 ">
                         Home
                     </a>
                 </li>
                 <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
-                    <a href="#" 
-                        class="hover:text-slate-200 block h-full px-2 flex items-center
+                    <a href="#" class="hover:text-slate-200 block h-full px-2 flex items-center
                                 ">
                         Home
                     </a>
                 </li>
                 <li class="list-item h-full mx-2 relative top-0 hover:top-1 duration-300 ease-in-out">
-                    <a href="#" 
-                        class="hover:text-slate-200 block h-full px-2 flex items-center
+                    <a href="#" class="hover:text-slate-200 block h-full px-2 flex items-center
                                 ">
                         Home
                     </a>
                 </li>
             </ul>
 
-            <div class="btns flex py-1">
+            <div class="btns lg:flex py-1 hidden">
                 <a href="#" class="p-2 mx-2 bg-white rounded-md hover:bg-slate-200 font-semibold text-slate-700">
                     <i class="bi bi-headset"></i> contact now !
                 </a>
@@ -91,14 +93,75 @@
                 </a>
             </div>
 
-            
+
         </nav>
 
-        <div class="header w-full bg-slate-100 relative" style="min-height: calc(100vh - 3rem);">
+        <div class="header py-2 w-full flex justify-around items-start pt-2 lg:pt-16 relative"
+            style="min-height: calc(100vh - 3rem);">
+            <div id="particles-js" class="absolute w-full h-full top-0 left-0 particles-js"></div>
 
+            <div class="w-full mb-16 px-2 md:px-4 lg:px-20 flex justify-around items-center mx-auto flex-col lg:flex-row">
+                <div 
+                    class="glass w-56 shadow-2xl h-80 rounded-md overflow-hidden
+                            flex flex-wrap mb-4">
+                    <img src="./assets/images/pic2.png" alt="no pic" class="w-56 h-full relative top-4">
+                </div>
 
-            <svg class="editorial bottom-0 absolute" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 24 150 28" preserveAspectRatio="none">
+                <div class="glass w-fit px-10 py-8 text-center flex flex-col justify-between">
+                    <div class="w-full leading-10">
+                        <h1 class="text-2xl text-white font-extrabold tracking-wider uppercase leading-[2.4rem]">
+                            The mastry of <span class="p-1 bg-sky-500 rounded-lg whitespace-nowrap my-4 s">Computer Science</span> in one place
+                        </h1>
+                        <h1 class="text-xl mt-2 font-semibold leading-[2.4rem] text-white uppercase">
+                            <span class="p-1 bg-red-500 rounded-lg">Full stack</span> developper in <span class="p-1 border-b-2 text-sky-500 border-red-500">web developpement</span> field
+                        </h1>
+
+                        <h6 class="text-md text-white my-4 max-w-[500px] mx-auto ">
+                            different technologies from 
+                            <span class="p-1 h-8 bg-slate-100 text-red-500 rounded-lg inline-flex items-center"><img class="h-4 mr-1 w-fit" src="./assets/images/laravel-icon2.png" alt="">Laravel</span> to 
+                            <span class="p-1 h-8 bg-sky-500 rounded-lg inline-flex items-center"><img class="h-4 mr-1 w-fit" src="./assets/images/react-logo.png" alt=""> Reactjs</span> to 
+                            <span class="p-1 h-8 bg-slate-100 text-green-500 rounded-lg inline-flex items-center"><img class="h-4 mr-1 w-fit" src="./assets/images/vue-logo.png" alt=""> Vuejs</span>, From websockets to 
+                            <span class="p-1 h-8 bg-sky-500 rounded-lg inline-flex items-center"> <i class="bi bi-cloud h-full flex items-center mr-1"></i> <span class="flex h-full items-center w-fit">cloud</span></span>
+                            including the <span class="p-1 bg-slate-100 text-sky-500">motivation</span> i have for my self and others !
+                        </h6>
+                    </div>
+
+                    <div class="socials w-full flex justify-around p-2">
+                        <a href="#" class="grid break-keep w-8 h-8 bg-slate-100 text-blue-700 rounded-full overflow-hidden
+                                 hover:w-24 duration-300 ease-in-out" style="grid-template-columns: 2rem auto;">
+                            <i class="bi bi-facebook w-8 h-8 flex justify-center items-center"></i>
+                            <span class="w-full h-full flex items-center justify-start">facebook</span>
+                        </a>
+
+                        <a href="#" class="grid break-keep w-8 h-8 bg-slate-100 text-sky-500 rounded-full overflow-hidden
+                                 hover:w-24 duration-300 ease-in-out" style="grid-template-columns: 2rem auto;">
+                            <i class="bi bi-twitter w-8 h-8 flex justify-center items-center"></i>
+                            <span class="w-full h-full flex items-center justify-start">twitter (x)</span>
+                        </a>
+
+                        <a href="#" class="grid break-keep w-8 h-8 bg-slate-100 text-slate-700 rounded-full overflow-hidden
+                                 hover:w-24 duration-300 ease-in-out" style="grid-template-columns: 2rem auto;">
+                            <i class="bi bi-github w-8 h-8 flex justify-center items-center"></i>
+                            <span class="w-full h-full flex items-center justify-start">github</span>
+                        </a>
+
+                        <a href="#" class="grid break-keep w-8 h-8 bg-slate-100 text-red-400 rounded-full overflow-hidden
+                                 hover:w-24 duration-300 ease-in-out" style="grid-template-columns: 2rem auto;">
+                            <i class="bi bi-instagram w-8 h-8 flex justify-center items-center"></i>
+                            <span class="w-full h-full flex items-center justify-start">instagram</span>
+                        </a>
+
+                        <a href="#" class="grid break-keep w-8 h-8 bg-slate-100 text-red-700 rounded-full overflow-hidden
+                                 hover:w-24 duration-300 ease-in-out" style="grid-template-columns: 2rem auto;">
+                            <i class="bi bi-youtube w-8 h-8 flex justify-center items-center"></i>
+                            <span class="w-full h-full flex items-center justify-start">youtube</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <svg class="editorial bottom-0 absolute" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
                 <defs>
                     <path id="gentle-wave" d="M-160 44c30 0 
     58-18 88-18s
@@ -118,13 +181,401 @@
 
         </div>
 
-        <div class="min-h-screen w-full bg-white">
+        <div class="min-h-[85vh] flex flex-col w-full bg-white relative">
+            <h1 class="text-4xl text-center text-sky-500 mx-auto mt-4 tracking-wider">
+                About me
+            </h1>
 
+            <div class="flex flex-wrap mt-10 w-full justify-around px-2">
+                <div class="info w-[350px] h-fit border p-2 my-4">
+                    <h1 class="flex items-center border-b-2 border-sky-500 justify-center text-sky-500 uppercase leading-10">
+                        <i class="bi bi-person h-full flex items-center mr-1 "></i>
+                        personal information
+                    </h1>
+
+                    <ul class="p-2">
+                        <li class="my-2">
+                            <span class="">
+                                full name :
+                            </span>
+                            <span class="capitalize font-semibold">
+                                karim aouaouada
+                            </span>
+                        </li>
+
+                        <li class="my-2">
+                            <span class="">
+                                age :
+                            </span>
+                            <span class="capitalize font-semibold">
+                                21 years old
+                            </span>
+                        </li>
+
+                        <li class="my-2">
+                            <span class="">
+                                status :
+                            </span>
+                            <span class="capitalize font-semibold">
+                                single
+                            </span>
+                        </li>
+
+                        <li class="my-2">
+                            <span class="">
+                                email :
+                            </span>
+                            <span class="capitalize font-semibold">
+                                karimaouaouda.officiel@gmail.com
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="info w-[350px] h-fit border p-2 my-4">
+                    <h1 class="flex items-center border-b-2 border-sky-500 justify-center text-sky-500 uppercase leading-10">
+                        <i class="bi bi-person h-full flex items-center mr-1 "></i>
+                        personal information
+                    </h1>
+
+                    <ul class="p-2">
+                        <li class="my-2">
+                            <span class="">
+                                full name :
+                            </span>
+                            <span class="capitalize font-semibold">
+                                karim aouaouada
+                            </span>
+                        </li>
+
+                        <li class="my-2">
+                            <span class="">
+                                age :
+                            </span>
+                            <span class="capitalize font-semibold">
+                                21 years old
+                            </span>
+                        </li>
+
+                        <li class="my-2">
+                            <span class="">
+                                status :
+                            </span>
+                            <span class="capitalize font-semibold">
+                                single
+                            </span>
+                        </li>
+
+                        <li class="my-2">
+                            <span class="">
+                                email :
+                            </span>
+                            <span class="capitalize font-semibold">
+                                karimaouaouda.officiel@gmail.com
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="info w-[350px] h-fit border p-2 my-4 ">
+                    <h1 class="flex items-center border-b-2 border-sky-500 justify-center text-sky-500 uppercase leading-10">
+                        <i class="bi bi-person h-full flex items-center mr-1 "></i>
+                        personal information
+                    </h1>
+
+                    <ul class="p-2">
+                        <li class="my-2">
+                            <span class="">
+                                full name :
+                            </span>
+                            <span class="capitalize font-semibold">
+                                karim aouaouada
+                            </span>
+                        </li>
+
+                        <li class="my-2">
+                            <span class="">
+                                age :
+                            </span>
+                            <span class="capitalize font-semibold">
+                                21 years old
+                            </span>
+                        </li>
+
+                        <li class="my-2">
+                            <span class="">
+                                status :
+                            </span>
+                            <span class="capitalize font-semibold">
+                                single
+                            </span>
+                        </li>
+
+                        <li class="my-2">
+                            <span class="">
+                                email :
+                            </span>
+                            <span class="capitalize font-semibold">
+                                karimaouaouda.officiel@gmail.com
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <svg class="editorial bottom-0 absolute" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="50" y="0" fill="dodgerblue" />
+                    <use xlink:href="#gentle-wave" x="50" y="3" fill="#aaa" />
+                    <use xlink:href="#gentle-wave" x="50" y="6" fill="whitesmoke" />
+                    <use xlink:href="#gentle-wave" x="50" y="6" fill="#334155" />
+                </g>
+            </svg>
+            <br clear="all">
         </div>
+
+        <div class="h-[500px] flex flex-col  w-full bg-slate-700 relative">
+            <div id="particles-js" class="absolute w-full h-full top-0 left-0 particles-js"></div>
+
+            <!-- rates here -->
+
+            <div class="px-2 w-full h-full flex items-center mt-10 overflow-hidden relative">
+                <div class="rates mb-20 w-full p-2 flex flex-nowrap overflow-auto flex-1 whitespace-nowrap">
+                    <div class="glass glass-white w-[400px] h-[200px]  shrink-0 mx-2 p-2">
+                        <div class="header-rate flex items-center">
+                            <div class="w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
+                                <img src="./assets/images/profile.jpg" class="w-full h-full shadow-2xl" alt="">
+                            </div>
+                            <div class="ml-2">
+                                <h1 class="capitalize text-lg font-semibold tracking-wider text-white">
+                                    Abda Nadir
+                                </h1>
+                            </div>
+                        </div>
+                        
+                            <blockquote class="mt-6" cite="https://facebook.com">
+                                    <p class="body pl-2 text-wrap w-full italic font-light text-sky-100 tracking-wide">
+                                        <sup>"</sup>
+                                        Karim is the best programmer i have eveer faced, his is so positive person who knows what he is doing i recommanded
+                                         he help me so well, also his team.
+                                        <sup>"</sup>
+                                    </p>
+                                    
+                            </blockquote>
+
+
+
+                        <div class="w-full text-right mt-4">
+                            <p class="font-extralight text-sm text-slate-200 italic mr-4">
+                                18 <sup>th</sup> jully 2023
+                            </p>
+                        </div>
+                            
+                    </div>
+
+                    <div class="glass glass-white w-[400px] h-[200px]  shrink-0 mx-2 p-2">
+                        <div class="header-rate flex items-center">
+                            <div class="w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
+                                <img src="./assets/images/profile.jpg" class="w-full h-full shadow-2xl" alt="">
+                            </div>
+                            <div class="ml-2">
+                                <h1 class="capitalize text-lg font-semibold tracking-wider text-white">
+                                    Abda Nadir
+                                </h1>
+                            </div>
+                        </div>
+                        
+                            <blockquote class="mt-6" cite="https://facebook.com">
+                                    <p class="body pl-2 text-wrap w-full italic font-light text-sky-100 tracking-wide">
+                                        <sup>"</sup>
+                                        Karim is the best programmer i have eveer faced, his is so positive person who knows what he is doing i recommanded
+                                         he help me so well, also his team.
+                                        <sup>"</sup>
+                                    </p>
+                                    
+                            </blockquote>
+
+
+
+                        <div class="w-full text-right mt-4">
+                            <p class="font-extralight text-sm text-slate-200 italic mr-4">
+                                18 <sup>th</sup> jully 2023
+                            </p>
+                        </div>
+                            
+                    </div>
+
+                    <div class="glass glass-white w-[400px] h-[200px]  shrink-0 mx-2 p-2">
+                        <div class="header-rate flex items-center">
+                            <div class="w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
+                                <img src="./assets/images/profile.jpg" class="w-full h-full shadow-2xl" alt="">
+                            </div>
+                            <div class="ml-2">
+                                <h1 class="capitalize text-lg font-semibold tracking-wider text-white">
+                                    Abda Nadir
+                                </h1>
+                            </div>
+                        </div>
+                        
+                            <blockquote class="mt-6" cite="https://facebook.com">
+                                    <p class="body pl-2 text-wrap w-full italic font-light text-sky-100 tracking-wide">
+                                        <sup>"</sup>
+                                        Karim is the best programmer i have eveer faced, his is so positive person who knows what he is doing i recommanded
+                                         he help me so well, also his team.
+                                        <sup>"</sup>
+                                    </p>
+                                    
+                            </blockquote>
+
+
+
+                        <div class="w-full text-right mt-4">
+                            <p class="font-extralight text-sm text-slate-200 italic mr-4">
+                                18 <sup>th</sup> jully 2023
+                            </p>
+                        </div>
+                            
+                    </div>
+
+                    <div class="glass glass-white w-[400px] h-[200px]  shrink-0 mx-2 p-2">
+                        <div class="header-rate flex items-center">
+                            <div class="w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
+                                <img src="./assets/images/profile.jpg" class="w-full h-full shadow-2xl" alt="">
+                            </div>
+                            <div class="ml-2">
+                                <h1 class="capitalize text-lg font-semibold tracking-wider text-white">
+                                    Abda Nadir
+                                </h1>
+                            </div>
+                        </div>
+                        
+                            <blockquote class="mt-6" cite="https://facebook.com">
+                                    <p class="body pl-2 text-wrap w-full italic font-light text-sky-100 tracking-wide">
+                                        <sup>"</sup>
+                                        Karim is the best programmer i have eveer faced, his is so positive person who knows what he is doing i recommanded
+                                         he help me so well, also his team.
+                                        <sup>"</sup>
+                                    </p>
+                                    
+                            </blockquote>
+
+
+
+                        <div class="w-full text-right mt-4">
+                            <p class="font-extralight text-sm text-slate-200 italic mr-4">
+                                18 <sup>th</sup> jully 2023
+                            </p>
+                        </div>
+                            
+                    </div>
+
+                    <div class="glass glass-white w-[400px] h-[200px]  shrink-0 mx-2 p-2">
+                        <div class="header-rate flex items-center">
+                            <div class="w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
+                                <img src="./assets/images/profile.jpg" class="w-full h-full shadow-2xl" alt="">
+                            </div>
+                            <div class="ml-2">
+                                <h1 class="capitalize text-lg font-semibold tracking-wider text-white">
+                                    Abda Nadir
+                                </h1>
+                            </div>
+                        </div>
+                        
+                            <blockquote class="mt-6" cite="https://facebook.com">
+                                    <p class="body pl-2 text-wrap w-full italic font-light text-sky-100 tracking-wide">
+                                        <sup>"</sup>
+                                        Karim is the best programmer i have eveer faced, his is so positive person who knows what he is doing i recommanded
+                                         he help me so well, also his team.
+                                        <sup>"</sup>
+                                    </p>
+                                    
+                            </blockquote>
+
+
+
+                        <div class="w-full text-right mt-4">
+                            <p class="font-extralight text-sm text-slate-200 italic mr-4">
+                                18 <sup>th</sup> jully 2023
+                            </p>
+                        </div>
+                            
+                    </div>
+
+                    <div class="glass glass-white w-[400px] h-[200px]  shrink-0 mx-2 p-2">
+                        <div class="header-rate flex items-center">
+                            <div class="w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
+                                <img src="./assets/images/profile.jpg" class="w-full h-full shadow-2xl" alt="">
+                            </div>
+                            <div class="ml-2">
+                                <h1 class="capitalize text-lg font-semibold tracking-wider text-white">
+                                    Abda Nadir
+                                </h1>
+                            </div>
+                        </div>
+                        
+                            <blockquote class="mt-6" cite="https://facebook.com">
+                                    <p class="body pl-2 text-wrap w-full italic font-light text-sky-100 tracking-wide">
+                                        <sup>"</sup>
+                                        Karim is the best programmer i have eveer faced, his is so positive person who knows what he is doing i recommanded
+                                         he help me so well, also his team.
+                                        <sup>"</sup>
+                                    </p>
+                                    
+                            </blockquote>
+
+
+
+                        <div class="w-full text-right mt-4">
+                            <p class="font-extralight text-sm text-slate-200 italic mr-4">
+                                18 <sup>th</sup> jully 2023
+                            </p>
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+
+            <svg class="editorial bottom-0 absolute" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="50" y="0" fill="dodgerblue" />
+                    <use xlink:href="#gentle-wave" x="50" y="3" fill="#aaa" />
+                    <use xlink:href="#gentle-wave" x="50" y="6" fill="whitesmoke" />
+                    <use xlink:href="#gentle-wave" x="50" y="6" fill="white" />
+                </g>
+            </svg>
+            <br clear="all">
+        </div>
+
+
+
+        
 
     </div>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script src="./particles.js"></script>
+    <script src="./js/particles.js"></script>
 </body>
 
 </html>

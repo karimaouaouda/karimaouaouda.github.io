@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -16,4 +17,33 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+.glass {
+    background: rgba(225, 198, 187, 0.1);
+    -webkit-backdrop-filter: blur(11px);
+    backdrop-filter: blur(11px);
+    border: 1px solid rgba(225, 198, 187, 0.15);
+}
+
+.glass-white{
+    background: rgba(225, 255, 255, 0.2)!important;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: 'Oswald';
+}
+
+.app{
+    scroll-snap-type: y mandatory;
+}
+.app>*{
+    scroll-snap-align: center;
 }
