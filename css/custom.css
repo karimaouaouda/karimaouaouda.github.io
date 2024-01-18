@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -41,9 +43,63 @@ body, html{
     font-family: 'Oswald';
 }
 
+.merr{
+    font-family: 'Merriweather';
+}
 .app{
     scroll-snap-type: y mandatory;
 }
 .app>*{
     scroll-snap-align: center;
 }
+
+
+.rate{
+    pointer-events: none;
+}
+
+.rate>*{
+    opacity : 0;
+    transform : translateY(30px);
+    transition-duration: .2s;
+    transition-timing-function : ease-in;
+    pointer-events: none;
+}
+
+.rate>*:nth-child(1){
+    transition-delay : .1s;
+}
+
+.rate>*:nth-child(2){
+    transition-delay : .2s;
+}
+
+.rate>*:nth-child(3){
+    transition-delay : .4s;
+}
+
+.rate.active{
+    opacity : 1;
+}
+
+.rate.active>*{
+    opacity : 1;
+    transform : translateY(0px);
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+    pointer-events: all;
+}
+
+.rate.active>*:nth-child(1){
+    transition-delay : .5s;
+}
+
+.rate.active>*:nth-child(2){
+    transition-delay : .6s;
+}
+
+.rate.active>*:nth-child(3){
+    transition-delay : .7s;
+}
+
+

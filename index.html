@@ -8,6 +8,7 @@
     <!-- Option 1: Include in HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Karim Aouaouada - portfolio</title>
+    
 </head>
 
 <body class="w-screen h-screen overflow-auto">
@@ -103,11 +104,11 @@
             <div class="w-full mb-16 px-2 md:px-4 lg:px-20 flex justify-around items-center mx-auto flex-col lg:flex-row">
                 <div 
                     class="glass w-56 shadow-2xl h-80 rounded-md overflow-hidden
-                            flex flex-wrap mb-4">
+                            flex flex-wrap mb-4 wow fadeInLeft">
                     <img src="./assets/images/pic2.png" alt="no pic" class="w-56 h-full relative top-4">
                 </div>
 
-                <div class="glass w-fit px-10 py-8 text-center flex flex-col justify-between">
+                <div class="glass w-fit px-10 py-8 text-center flex flex-col justify-between wow fadeInRight">
                     <div class="w-full leading-10">
                         <h1 class="text-2xl text-white font-extrabold tracking-wider uppercase leading-[2.4rem]">
                             The mastry of <span class="p-1 bg-sky-500 rounded-lg whitespace-nowrap my-4 s">Computer Science</span> in one place
@@ -187,7 +188,7 @@
             </h1>
 
             <div class="flex flex-wrap mt-10 w-full justify-around px-2">
-                <div class="info w-[350px] h-fit border p-2 my-4">
+                <div class="info w-[350px] h-fit block border p-2 my-4 wow fadeInLeft" data-wow-duration="5s" data-wow-offset="0">
                     <h1 class="flex items-center border-b-2 border-sky-500 justify-center text-sky-500 uppercase leading-10">
                         <i class="bi bi-person h-full flex items-center mr-1 "></i>
                         personal information
@@ -279,7 +280,7 @@
                 </div>
 
 
-                <div class="info w-[350px] h-fit border p-2 my-4 ">
+                <div class="info w-[350px] h-fit border p-2 my-4 mb-20 ">
                     <h1 class="flex items-center border-b-2 border-sky-500 justify-center text-sky-500 uppercase leading-10">
                         <i class="bi bi-person h-full flex items-center mr-1 "></i>
                         personal information
@@ -346,204 +347,229 @@
             <br clear="all">
         </div>
 
-        <div class="h-[500px] flex flex-col  w-full bg-slate-700 relative">
+        <div class="min-h-screen flex flex-col w-full bg-slate-700 relative">
             <div id="particles-js" class="absolute w-full h-full top-0 left-0 particles-js"></div>
 
             <!-- rates here -->
 
-            <div class="px-2 w-full h-full flex items-center mt-10 overflow-hidden relative">
-                <div class="rates mb-20 w-full p-2 flex flex-nowrap overflow-auto flex-1 whitespace-nowrap">
-                    <div class="glass glass-white w-[400px] h-[200px]  shrink-0 mx-2 p-2">
-                        <div class="header-rate flex items-center">
-                            <div class="w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
-                                <img src="./assets/images/profile.jpg" class="w-full h-full shadow-2xl" alt="">
-                            </div>
-                            <div class="ml-2">
-                                <h1 class="capitalize text-lg font-semibold tracking-wider text-white">
-                                    Abda Nadir
-                                </h1>
-                            </div>
-                        </div>
-                        
-                            <blockquote class="mt-6" cite="https://facebook.com">
-                                    <p class="body pl-2 text-wrap w-full italic font-light text-sky-100 tracking-wide">
-                                        <sup>"</sup>
-                                        Karim is the best programmer i have eveer faced, his is so positive person who knows what he is doing i recommanded
-                                         he help me so well, also his team.
-                                        <sup>"</sup>
-                                    </p>
-                                    
-                            </blockquote>
-
-
-
-                        <div class="w-full text-right mt-4">
-                            <p class="font-extralight text-sm text-slate-200 italic mr-4">
-                                18 <sup>th</sup> jully 2023
-                            </p>
-                        </div>
-                            
+            <div class="px-2 flex justify-center mt-10 overflow-hidden relative mb-10">
+                <div x-data="{current : 1, count : 6}" x-init="autoCarousel($data)"
+                    class="carousel-cotainer bg-white rounded-md p-2 border shadow-xl">
+                    <div class="header-carousel px-10">
+                        <h1 class="text-3xl text-slate-900 merr tracking-wider mb-8 pt-4">
+                            what my clients say about me ?
+                        </h1>
                     </div>
 
-                    <div class="glass glass-white w-[400px] h-[200px]  shrink-0 mx-2 p-2">
-                        <div class="header-rate flex items-center">
-                            <div class="w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
-                                <img src="./assets/images/profile.jpg" class="w-full h-full shadow-2xl" alt="">
-                            </div>
-                            <div class="ml-2">
-                                <h1 class="capitalize text-lg font-semibold tracking-wider text-white">
-                                    Abda Nadir
-                                </h1>
-                            </div>
-                        </div>
-                        
-                            <blockquote class="mt-6" cite="https://facebook.com">
-                                    <p class="body pl-2 text-wrap w-full italic font-light text-sky-100 tracking-wide">
-                                        <sup>"</sup>
-                                        Karim is the best programmer i have eveer faced, his is so positive person who knows what he is doing i recommanded
-                                         he help me so well, also his team.
-                                        <sup>"</sup>
+                    <div class="rate-render-cotainer px-2 md:px-10 max-w-[600px] py-2">
+
+                        <div class="renderer relative w-full rounded-lg py-2 border border-slate-600 h-[300px] md:h-[200px]">
+
+                            <div data-number="1" :class="{'active' : $el.dataset.number == current }"
+                             class="rate w-full flex h-full flex-col justify-between absolute pb-6">
+                                <div class="rate-header flex m-2 items-center">
+                                    <div class="img w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
+                                        <img src="./assets/images/profile.jpg" class="w-full h-full" alt="">
+                                    </div>
+                                    <h2 class="ml-2 capitalize text-slate-800 font-semibold tracking-wide">
+                                        Abda Mohammed Nadir
+                                    </h2>
+                                </div>
+
+
+                                <div class="rate-body pl-4 pr-2">
+                                    <p class="text-light text-slate-800 tracking-normal leading-8 first-line:pl-2">
+                                        <sup class="italic">
+                                            "
+                                        </sup>
+                                        Karim Aouaouda is the most crazy person i have ever seen, he have the capabiities of a perfect programmer
+                                        with the patient of old man, with the positively and motivation of a young man, with smile :)
+                                        <sup class="italic">
+                                            "
+                                        </sup>
                                     </p>
-                                    
-                            </blockquote>
+                                </div>
+
+                                <div class="time m-2">
+                                    <h4 class="font-light text-sm text-right pr-2">
+                                        18 <sup>th</sup> jully 2023
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div data-number="2" :class="{'active' : $el.dataset.number == current }"
+                             class="rate w-full flex h-full flex-col justify-between absolute  pb-6">
+                                <div class="rate-header flex m-2 items-center">
+                                    <div class="img w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
+                                        <img src="./assets/images/profile.jpg" class="w-full h-full" alt="">
+                                    </div>
+                                    <h2 class="ml-2 capitalize text-slate-800 font-semibold tracking-wide">
+                                        Abda Mohammed smail
+                                    </h2>
+                                </div>
 
 
+                                <div class="rate-body pl-4 pr-2">
+                                    <p class="text-light text-slate-800 tracking-normal leading-8 first-line:pl-2">
+                                        <sup class="italic">
+                                            "
+                                        </sup>
+                                        Karim Aouaouda is the most crazy person i have ever seen, he have the capabiities of a perfect programmer
+                                        with the patient of old man, with the positively and motivation of a young man, with smile :)
+                                        <sup class="italic">
+                                            "
+                                        </sup>
+                                    </p>
+                                </div>
 
-                        <div class="w-full text-right mt-4">
-                            <p class="font-extralight text-sm text-slate-200 italic mr-4">
-                                18 <sup>th</sup> jully 2023
-                            </p>
+                                <div class="time m-2">
+                                    <h4 class="font-light text-sm text-right pr-2">
+                                        18 <sup>th</sup> jully 2023
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div data-number="3" :class="{'active' : $el.dataset.number == current }"
+                             class="rate w-full flex h-full flex-col justify-between absolute  pb-6">
+                                <div class="rate-header flex m-2 items-center">
+                                    <div class="img w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
+                                        <img src="./assets/images/profile.jpg" class="w-full h-full" alt="">
+                                    </div>
+                                    <h2 class="ml-2 capitalize text-slate-800 font-semibold tracking-wide">
+                                        Abda Mohammed Nadir
+                                    </h2>
+                                </div>
+
+
+                                <div class="rate-body pl-4 pr-2">
+                                    <p class="text-light text-slate-800 tracking-normal leading-8 first-line:pl-2">
+                                        <sup class="italic">
+                                            "
+                                        </sup>
+                                        Karim Aouaouda is the most crazy person i have ever seen, he have the capabiities of a perfect programmer
+                                        with the patient of old man, with the positively and motivation of a young man, with smile :)
+                                        <sup class="italic">
+                                            "
+                                        </sup>
+                                    </p>
+                                </div>
+
+                                <div class="time m-2">
+                                    <h4 class="font-light text-sm text-right pr-2">
+                                        18 <sup>th</sup> jully 2023
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div data-number="4" :class="{'active' : $el.dataset.number == current }"
+                             class="rate w-full flex h-full flex-col justify-between absolute  pb-6">
+                                <div class="rate-header flex m-2 items-center">
+                                    <div class="img w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
+                                        <img src="./assets/images/profile.jpg" class="w-full h-full" alt="">
+                                    </div>
+                                    <h2 class="ml-2 capitalize text-slate-800 font-semibold tracking-wide">
+                                        Abda Mohammed Nadir
+                                    </h2>
+                                </div>
+
+
+                                <div class="rate-body pl-4 pr-2">
+                                    <p class="text-light text-slate-800 tracking-normal leading-8 first-line:pl-2">
+                                        <sup class="italic">
+                                            "
+                                        </sup>
+                                        Karim Aouaouda is the most crazy person i have ever seen, he have the capabiities of a perfect programmer
+                                        with the patient of old man, with the positively and motivation of a young man, with smile :)
+                                        <sup class="italic">
+                                            "
+                                        </sup>
+                                    </p>
+                                </div>
+
+                                <div class="time m-2">
+                                    <h4 class="font-light text-sm text-right pr-2">
+                                        18 <sup>th</sup> jully 2023
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div data-number="5" :class="{'active' : $el.dataset.number == current }"
+                             class="rate w-full flex h-full flex-col justify-between absolute  pb-6">
+                                <div class="rate-header flex m-2 items-center">
+                                    <div class="img w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
+                                        <img src="./assets/images/profile.jpg" class="w-full h-full" alt="">
+                                    </div>
+                                    <h2 class="ml-2 capitalize text-slate-800 font-semibold tracking-wide">
+                                        Abda Mohammed Nadir
+                                    </h2>
+                                </div>
+
+
+                                <div class="rate-body pl-4 pr-2">
+                                    <p class="text-light text-slate-800 tracking-normal leading-8 first-line:pl-2">
+                                        <sup class="italic">
+                                            "
+                                        </sup>
+                                        Karim Aouaouda is the most crazy person i have ever seen, he have the capabiities of a perfect programmer
+                                        with the patient of old man, with the positively and motivation of a young man, with smile :)
+                                        <sup class="italic">
+                                            "
+                                        </sup>
+                                    </p>
+                                </div>
+
+                                <div class="time m-2">
+                                    <h4 class="font-light text-sm text-right pr-2">
+                                        18 <sup>th</sup> jully 2023
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <div data-number="6" :class="{'active' : $el.dataset.number == current }"
+                             class="rate w-full flex h-full flex-col justify-between absolute  pb-6">
+                                <div class="rate-header flex m-2 items-center">
+                                    <div class="img w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
+                                        <img src="./assets/images/profile.jpg" class="w-full h-full" alt="">
+                                    </div>
+                                    <h2 class="ml-2 capitalize text-slate-800 font-semibold tracking-wide">
+                                        Abda Mohammed Nadir
+                                    </h2>
+                                </div>
+
+
+                                <div class="rate-body pl-4 pr-2">
+                                    <p class="text-light text-slate-800 tracking-normal leading-8 first-line:pl-2">
+                                        <sup class="italic">
+                                            "
+                                        </sup>
+                                        Karim Aouaouda is the most crazy person i have ever seen, he have the capabiities of a perfect programmer
+                                        with the patient of old man, with the positively and motivation of a young man, with smile :)
+                                        <sup class="italic">
+                                            "
+                                        </sup>
+                                    </p>
+                                </div>
+
+                                <div class="time m-2">
+                                    <h4 class="font-light text-sm text-right pr-2">
+                                        18 <sup>th</sup> jully 2023
+                                    </h4>
+                                </div>
+                            </div>
+
                         </div>
-                            
+
                     </div>
 
-                    <div class="glass glass-white w-[400px] h-[200px]  shrink-0 mx-2 p-2">
-                        <div class="header-rate flex items-center">
-                            <div class="w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
-                                <img src="./assets/images/profile.jpg" class="w-full h-full shadow-2xl" alt="">
-                            </div>
-                            <div class="ml-2">
-                                <h1 class="capitalize text-lg font-semibold tracking-wider text-white">
-                                    Abda Nadir
-                                </h1>
-                            </div>
-                        </div>
-                        
-                            <blockquote class="mt-6" cite="https://facebook.com">
-                                    <p class="body pl-2 text-wrap w-full italic font-light text-sky-100 tracking-wide">
-                                        <sup>"</sup>
-                                        Karim is the best programmer i have eveer faced, his is so positive person who knows what he is doing i recommanded
-                                         he help me so well, also his team.
-                                        <sup>"</sup>
-                                    </p>
-                                    
-                            </blockquote>
-
-
-
-                        <div class="w-full text-right mt-4">
-                            <p class="font-extralight text-sm text-slate-200 italic mr-4">
-                                18 <sup>th</sup> jully 2023
-                            </p>
-                        </div>
-                            
+                    <div class="points mt-4 flex justify-center w-full mb-2">
+                        <span @click="current=$el.dataset.target" data-target="1" :class="{'bg-slate-800': current == $el.dataset.target, 'bg-slate-600' : current != $el.dataset.target}" class="w-2 h-2 rounded-full cursor-pointer hover:bg-slate-800 block mx-2"></span>
+                        <span @click="current=$el.dataset.target" data-target="2" :class="{'bg-slate-800': current == $el.dataset.target, 'bg-slate-600' : current != $el.dataset.target}" class="w-2 h-2 rounded-full cursor-pointer hover:bg-slate-800 block mx-2"></span>
+                        <span @click="current=$el.dataset.target" data-target="3" :class="{'bg-slate-800': current == $el.dataset.target, 'bg-slate-600' : current != $el.dataset.target}" class="w-2 h-2 rounded-full cursor-pointer hover:bg-slate-800 block mx-2"></span>
+                        <span @click="current=$el.dataset.target" data-target="4" :class="{'bg-slate-800': current == $el.dataset.target, 'bg-slate-600' : current != $el.dataset.target}" class="w-2 h-2 rounded-full cursor-pointer hover:bg-slate-800 block mx-2"></span>
+                        <span @click="current=$el.dataset.target" data-target="5" :class="{'bg-slate-800': current == $el.dataset.target, 'bg-slate-600' : current != $el.dataset.target}" class="w-2 h-2 rounded-full cursor-pointer hover:bg-slate-800 block mx-2"></span>
+                        <span @click="current=$el.dataset.target" data-target="6" :class="{'bg-slate-800': current == $el.dataset.target, 'bg-slate-600' : current != $el.dataset.target}" class="w-2 h-2 rounded-full cursor-pointer hover:bg-slate-800 block mx-2"></span>
                     </div>
 
-                    <div class="glass glass-white w-[400px] h-[200px]  shrink-0 mx-2 p-2">
-                        <div class="header-rate flex items-center">
-                            <div class="w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
-                                <img src="./assets/images/profile.jpg" class="w-full h-full shadow-2xl" alt="">
-                            </div>
-                            <div class="ml-2">
-                                <h1 class="capitalize text-lg font-semibold tracking-wider text-white">
-                                    Abda Nadir
-                                </h1>
-                            </div>
-                        </div>
-                        
-                            <blockquote class="mt-6" cite="https://facebook.com">
-                                    <p class="body pl-2 text-wrap w-full italic font-light text-sky-100 tracking-wide">
-                                        <sup>"</sup>
-                                        Karim is the best programmer i have eveer faced, his is so positive person who knows what he is doing i recommanded
-                                         he help me so well, also his team.
-                                        <sup>"</sup>
-                                    </p>
-                                    
-                            </blockquote>
-
-
-
-                        <div class="w-full text-right mt-4">
-                            <p class="font-extralight text-sm text-slate-200 italic mr-4">
-                                18 <sup>th</sup> jully 2023
-                            </p>
-                        </div>
-                            
-                    </div>
-
-                    <div class="glass glass-white w-[400px] h-[200px]  shrink-0 mx-2 p-2">
-                        <div class="header-rate flex items-center">
-                            <div class="w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
-                                <img src="./assets/images/profile.jpg" class="w-full h-full shadow-2xl" alt="">
-                            </div>
-                            <div class="ml-2">
-                                <h1 class="capitalize text-lg font-semibold tracking-wider text-white">
-                                    Abda Nadir
-                                </h1>
-                            </div>
-                        </div>
-                        
-                            <blockquote class="mt-6" cite="https://facebook.com">
-                                    <p class="body pl-2 text-wrap w-full italic font-light text-sky-100 tracking-wide">
-                                        <sup>"</sup>
-                                        Karim is the best programmer i have eveer faced, his is so positive person who knows what he is doing i recommanded
-                                         he help me so well, also his team.
-                                        <sup>"</sup>
-                                    </p>
-                                    
-                            </blockquote>
-
-
-
-                        <div class="w-full text-right mt-4">
-                            <p class="font-extralight text-sm text-slate-200 italic mr-4">
-                                18 <sup>th</sup> jully 2023
-                            </p>
-                        </div>
-                            
-                    </div>
-
-                    <div class="glass glass-white w-[400px] h-[200px]  shrink-0 mx-2 p-2">
-                        <div class="header-rate flex items-center">
-                            <div class="w-10 h-10 rounded-full border border-sky-500 overflow-hidden">
-                                <img src="./assets/images/profile.jpg" class="w-full h-full shadow-2xl" alt="">
-                            </div>
-                            <div class="ml-2">
-                                <h1 class="capitalize text-lg font-semibold tracking-wider text-white">
-                                    Abda Nadir
-                                </h1>
-                            </div>
-                        </div>
-                        
-                            <blockquote class="mt-6" cite="https://facebook.com">
-                                    <p class="body pl-2 text-wrap w-full italic font-light text-sky-100 tracking-wide">
-                                        <sup>"</sup>
-                                        Karim is the best programmer i have eveer faced, his is so positive person who knows what he is doing i recommanded
-                                         he help me so well, also his team.
-                                        <sup>"</sup>
-                                    </p>
-                                    
-                            </blockquote>
-
-
-
-                        <div class="w-full text-right mt-4">
-                            <p class="font-extralight text-sm text-slate-200 italic mr-4">
-                                18 <sup>th</sup> jully 2023
-                            </p>
-                        </div>
-                            
-                    </div>
                 </div>
             </div>
 
@@ -567,7 +593,198 @@
             <br clear="all">
         </div>
 
+        <div class="min-h-[100vh] flex flex-col w-full bg-white relative">
+            <div class="mt-8 flex justify-around flex-wrap w-full">
+                <h1 class="text-4xl my-auto mx-auto lg:text-6xl font-semibold merr text-slate-800 text-center lg:text-left tracking-wide w-full px-4 lg:px-0 lg:max-w-[350px] leading-[3.5rem]">
+                    Stay in touch With me and 
+                    <span class="p-1 mb-8 lg:mb-0 inline-block lg:block w-fit bg-sky-500 rounded-lg text-white mx-auto lg:mx-0">Contact</span> me now !
+                </h1>
 
+                <div class="contact-box mb-14 mx-auto p-2 shadow-2xl w-[500px] max-w-[400] flex flex-col">
+                    <h2 class="p-2 text-center text-2xl text-slate-800">
+                        <span class="block w-fit p-1 bg-slate-700 rounded-md text-white mx-auto">
+                            waiting for you
+                        </span>
+                    </h2>
+                    <div class="input-box relative mx-auto w-full lg:w-4/5 mb-4">
+                        <div class="inpt-inner flex overflow-hidden h-14 relative bg-white rounded-md border border-sky-500">
+                            <i class="bi bi-envelope w-14 h-full flex items-center justify-center text-sky-500"></i>
+                            <input type="text" class="w-full h-full outline-none border-none" placeholder="example@email.com...">
+                        </div>
+                    </div>
+
+                    <div class="input-box relative mx-auto w-full lg:w-4/5 mb-4">
+                        <div class="inpt-inner flex overflow-hidden h-14 relative bg-white rounded-md border border-sky-500">
+                            <i class="bi bi-patch-question w-14 h-full flex items-center justify-center text-sky-500"></i>
+                            <input type="text" class="w-full h-full outline-none border-none" placeholder="subject">
+                        </div>
+                    </div>
+
+                    <div class="input-box relative mx-auto w-full lg:w-4/5 mb-4" x-data="{lettersCount : 0}">
+                        <div class="inpt-inner flex overflow-hidden h-auto relative bg-white rounded-md border border-sky-500 relative">
+                            <textarea maxlength="250" @input="lettersCount = $el.value.length" class="w-full outline-none border-none p-2 h-[150px] max-h-[250px] min-h-[80px]" placeholder="message..."></textarea>
+                        
+                            <span class="absolute bottom-2 right-2 text-slate-600 text-xs">
+                                <span x-text="lettersCount"></span>/250
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="btn mb-4">
+                        <button class="p-2 rounded-md border border-sky-500 text-sky-500 flex items-center float-right mr-14 hover:bg-slate-200">
+                            send <i class="bi bi-send ml-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                                <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"/>
+                              </svg></i>
+                        </button>
+                    </div>
+                </div>
+
+                <svg class="editorial bottom-0 absolute" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="50" y="0" fill="dodgerblue" />
+                    <use xlink:href="#gentle-wave" x="50" y="3" fill="#aaa" />
+                    <use xlink:href="#gentle-wave" x="50" y="6" fill="whitesmoke" />
+                    <use xlink:href="#gentle-wave" x="50" y="6" fill="#334155" />
+                </g>
+            </svg>
+            <br clear="all">
+            </div>
+        </div>
+
+        <footer class="min-h-fit flex flex-col justify-between w-full bg-slate-700 relative">
+            <div id="particles-js" class="absolute w-full h-full top-0 left-0 particles-js"></div>
+
+            <div class="glass glass-white p-2 mt-8 max-w-[800px] w-[60vw] mx-auto">
+                <div class="header-news w-full">
+                    <h1 class="px-2 text-center w-full text-3xl text-white mx-auto">
+                        subscribe to my <span class="inline-block w-fit p-1 rounded-lg bg-sky-500 text-white uppercase">newsletter</span>
+                    </h1>
+                </div>
+
+                <div class="inut-box w-full lg:w-3/5 flex justify-center mt-8 mx-auto">
+                    <div class="inpt w-full h-14 flex mx-auto bg-white">
+                        <i class="bi bi-envelope w-14 h-full flex items-center justify-center bg-sky-500 text-white text-2xl"></i>
+                        <input type="text" placeholder="example@email.com..." name="newsletteremail" id="s" class="w-full h-full outline-0 border-0 ml-4">
+                    </div>
+                </div>
+
+                <div class="mt-4 w-full flex justify-center">
+                    <button class="p-2 bg-red-500 text-white float-center mx-center tracking-wider uppercase text-xl hover:bg-red-700 duration-300 ease-in">
+                        subscribe
+                    </button>
+                </div>
+            </div>
+
+            <div class="glass mt-4 p-2 flex flex-wrap items-center justify-center ">
+                <div class="infos w-1/2 min-w-[300px] border-b sm:border-b-0 sm:border-e border-sky-200">
+                    <div class="title w-full">
+                        <h2 class="text-center w-full text-white tracking-wide text-2xl">
+                            contact information
+                        </h2>
+                    </div>
+
+                    <ul class="mx-auto w-fit text-sky-200">
+                        <li class="w-auto text-left my-2 flex items-center">
+                            <i class="bi bi-envelope ml-2"></i>
+                            <span class="ml-2 block relative top-1">
+                                karimaouaouda.officiel@gmail.com
+                            </span>
+                        </li>
+
+                        <li class="w-auto text-left my-2 flex items-center">
+                            <i class="bi bi-telephone ml-2"></i>
+                            <span class="ml-2 block relative top-1">
+                                +213655766709
+                            </span>
+                        </li>
+
+                        <li class="w-auto text-left my-2 flex items-center">
+                            <i class="bi bi-facebook ml-2"></i>
+                            <span class="ml-2 block relative top-1">
+                                <a href="https://www.fb.com/judoka24">
+                                    karim aouaouda
+                                </a>
+                            </span>
+                            <i class="bi bi-box-arrow-up-right ml-2"></i>
+                        </li>
+
+                        <li class="w-auto text-left my-2 flex items-center">
+                            <i class="bi bi-github ml-2"></i>
+                            <span class="ml-2 block relative top-1">
+                                <a href="https://github.com/karimaouaouda">
+                                    karim aouaouda
+                                </a>
+                            </span>
+                            <i class="bi bi-box-arrow-up-right ml-2"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="infos w-1/2 min-w-[300px]  border-sky-200">
+                    <div class="title w-full">
+                        <h2 class="text-center w-full text-white tracking-wide text-2xl">
+                            contact information
+                        </h2>
+                    </div>
+
+                    <ul class="mx-auto w-fit text-sky-200">
+                        <li class="w-auto text-left my-2 flex items-center">
+                            <i class="bi bi-envelope ml-2"></i>
+                            <span class="ml-2 block relative top-1">
+                                karimaouaouda.officiel@gmail.com
+                            </span>
+                        </li>
+
+                        <li class="w-auto text-left my-2 flex items-center">
+                            <i class="bi bi-telephone ml-2"></i>
+                            <span class="ml-2 block relative top-1">
+                                +213655766709
+                            </span>
+                        </li>
+
+                        <li class="w-auto text-left my-2 flex items-center">
+                            <i class="bi bi-facebook ml-2"></i>
+                            <span class="ml-2 block relative top-1">
+                                <a href="https://www.fb.com/judoka24">
+                                    karim aouaouda
+                                </a>
+                            </span>
+                            <i class="bi bi-box-arrow-up-right ml-2"></i>
+                        </li>
+
+                        <li class="w-auto text-left my-2 flex items-center">
+                            <i class="bi bi-github ml-2"></i>
+                            <span class="ml-2 block relative top-1">
+                                <a href="https://github.com/karimaouaouda">
+                                    karim aouaouda
+                                </a>
+                            </span>
+                            <i class="bi bi-box-arrow-up-right ml-2"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="glass w-full text-center text-xl uppercase">
+                <sup>&copy;</sup> Karim Aouaouda
+            </div>
+        </footer>
+
+
+        <div class="fixed right-4 bottom-4 text-slate-800" x-data="{}">
+            <div @click="backToTop()" class="w-10 h-10 rounded-full cursor-pointer glass opacity-30 hover:opacity-100 duration-300 ease-in-out">
+                <i class="bi bi-arrow-up w-full h-full flex justify-center items-center"></i>
+            </div>
+        </div>
 
         
 
@@ -576,6 +793,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
     <script src="./particles.js"></script>
     <script src="./js/particles.js"></script>
+    <script src="./js/custom.js"></script>
 </body>
 
 </html>
